@@ -5,8 +5,8 @@ namespace Zad3.Models.ContainerTypes;
 public class GasContainer : Container,IHazardNotifier
 {
     public double Pressure { get; protected set; }
-    public GasContainer( double containerWeight, double depth, double maxWeight, double pressure) 
-        :base(containerWeight, depth, maxWeight)
+    public GasContainer( double containerWeight, double depth, double maxCargoWeight, double pressure) 
+        :base(containerWeight, depth, maxCargoWeight)
     {
         Pressure = pressure;
     }
@@ -15,11 +15,12 @@ public class GasContainer : Container,IHazardNotifier
 
     public override void EmptyContainer()
     {
-        CurrentWeight  *=  0.05;
+        CurrentCargoWeight  = CurrentCargoWeight* 0.05;
     }
 
     public string NotifyAboutHazard()
     {
+        Console.WriteLine("dangerous event in container: " + GetSerialNumber());
         return "dangerous event in container: " + GetSerialNumber();
     }
 }

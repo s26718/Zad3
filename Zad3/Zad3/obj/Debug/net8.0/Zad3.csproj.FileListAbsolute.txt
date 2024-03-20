@@ -1,0 +1,15 @@
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/Zad3
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/Zad3.deps.json
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/Zad3.runtimeconfig.json
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/Zad3.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/Zad3.pdb
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.AssemblyInfoInputs.cache
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.AssemblyInfo.cs
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.csproj.CoreCompileInputs.cache
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.sourcelink.json
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/refint/Zad3.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.pdb
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.genruntimeconfig.cache
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/ref/Zad3.dll

@@ -9,12 +9,12 @@ public class LiquidContainer  : Container, IHazardNotifier
     private static List<string> dangerousCargo;
     
 
-    public LiquidContainer( double containerWeight, double depth, double maxWeight)
-        : base( containerWeight, depth,  maxWeight)
+    public LiquidContainer( double containerWeight, double depth, double maxCargoWeight)
+        : base( containerWeight, depth,  maxCargoWeight)
     {
         dangerousCargo = new List<string>()
         {
-            "petrol"
+            "Petrol","Hydrogen"
         };
     }
     
@@ -26,34 +26,32 @@ public class LiquidContainer  : Container, IHazardNotifier
 
     public override void LoadCargo(double cargoWeight, string cargoType)
     {
-        bool isCargoBeingLoadedDangerous = dangerousCargo.Contains(cargoType) ? true : false;
-        if (cargoWeight + CurrentWeight > MaxWeight)
+        bool isCargoBeingLoadedDangerous = dangerousCargo.Contains(cargoType);
+        if (cargoWeight + CurrentCargoWeight > MaxCargoWeight)
         {
-            throw new OverfillException("cargo with weight of: " + cargoWeight + " is too heavy for this container, max weight is: " + MaxWeight);
+            throw new OverfillException("cargo with weight of: " + cargoWeight + " is too heavy for this container, max cargo weight is: " + MaxCargoWeight);
             
         }
-        if (isCargoBeingLoadedDangerous && cargoWeight  + CurrentWeight > (0.5 * MaxWeight))
+        if (isCargoBeingLoadedDangerous && cargoWeight  + CurrentCargoWeight > (0.5 * MaxCargoWeight))
         {
             this.NotifyAboutHazard();
-            //throw new OverfillException("cargo is dangerous, you can only fill 50% of the max load which is " +
-            //(0.5 * MaxWeight) + " and you're trying to load " + cargoWeight);
+
         }
-        if (!isCargoBeingLoadedDangerous && cargoWeight + CurrentWeight > (0.9 * MaxWeight))
+        if (!isCargoBeingLoadedDangerous && cargoWeight + CurrentCargoWeight > (0.9 * MaxCargoWeight))
         {
             this.NotifyAboutHazard();
-            //throw new OverfillException("this is a liquid container, you can only fill 90% of the max load which is " +
-                                        //(0.9 * MaxWeight) + " and you're trying to load " + cargoWeight);
+
         }
 
         IsDangerous = isCargoBeingLoadedDangerous;
-        CargoType = cargoType;
-        CurrentWeight += cargoWeight;
+        CurrentCargoWeight += cargoWeight;
         
     }
 
 
     public string NotifyAboutHazard()
     {
+        Console.WriteLine("dangerous event in container: " + GetSerialNumber());
         return "dangerous event in container: " + GetSerialNumber();
     }
     

@@ -17,11 +17,13 @@ public class CoolingContainer : Container
         {"Sausages",5 },
         {"Eggs",19 },
     };
+    public string AllowedCargoType { get; protected set; }
 
     public double Temperature { get; protected set; }
-    public CoolingContainer(double containerWeight, double depth , double maxWeight, double temperature) 
-        :base(containerWeight, depth, maxWeight)
+    public CoolingContainer(double containerWeight, double depth , double maxCargoWeight, double temperature, string allowedCargoType) 
+        :base(containerWeight, depth, maxCargoWeight)
     {
+        AllowedCargoType = allowedCargoType;
         Temperature = temperature;
     }
     
@@ -29,26 +31,28 @@ public class CoolingContainer : Container
 
     public override void LoadCargo(double cargoWeight, string cargoType)
     {
-        if ( CurrentWeight != 0 && cargoType != CargoType)
+        if ( CurrentCargoWeight != 0 && cargoType != AllowedCargoType)
         {
-            throw new NotAllowedCargoTypeException("this container can currently store only  " + CargoType +
+            Console.WriteLine("container " + GetSerialNumber() + " can currently store only  " + AllowedCargoType +
                                                    " , so loading it with " + cargoType + " is impossible");
+            return;
         }
-        if (cargoWeight + CurrentWeight > MaxWeight)
+        if (cargoWeight + CurrentCargoWeight > MaxCargoWeight)
         {
-            throw new OverfillException("cargo with weight of: " + cargoWeight + " is too heavy for this container, max weight is: " + MaxWeight);
+            Console.WriteLine("cargo with weight of: " + cargoWeight + " is too heavy for this container, max weight is: " + MaxCargoWeight);
+            return;
         }
 
         if (Temperature < requiredTemperatures[cargoType])
         {
-            throw new TemperatureException("temperature of the container(" + Temperature + ") is too low for " +
+            Console.WriteLine("temperature of the container "+ GetSerialNumber() + "(" + Temperature + ") is too low for " +
                                            cargoType + ", lowest possible is " + requiredTemperatures[cargoType]);
+            return;
         }
         
-        else
-        {
-            CurrentWeight = cargoWeight;
-            CargoType = cargoType;
-        }
+        
+        CurrentCargoWeight += cargoWeight; 
+        AllowedCargoType = cargoType;
+        
     }
 }

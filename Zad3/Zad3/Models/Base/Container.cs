@@ -5,25 +5,24 @@ namespace Zad3.Models.Base;
 
 public abstract class Container
 {
-    protected static int idGenerator;
-    public string CargoType { get; protected set; }
-    public double CurrentWeight { get; set ; }
+    private static int idGenerator;
+    public double CurrentCargoWeight { get; set ; }
     public double ContainerWeight { get; }
     public double Depth { get; }
-    protected int Id { get;  set; }
-    public double MaxWeight { get; }
+    protected int Id { get;   }
+    public double MaxCargoWeight { get; }
 
-    protected Container(double containerWeight, double depth,  double maxWeight)
+    protected Container(double containerWeight, double depth,  double maxCargoWeight)
     {
         ContainerWeight = containerWeight;
         Depth = depth;
         Id = ++idGenerator;
-        MaxWeight = maxWeight;
+        MaxCargoWeight = maxCargoWeight;
     }
 
     public virtual void EmptyContainer()
     {
-        CurrentWeight = 0;
+        CurrentCargoWeight = 0;
     }
 
     public virtual string GetSerialNumber()
@@ -33,20 +32,18 @@ public abstract class Container
 
     public virtual string GetInfo()
     {
-        return "Container " + GetSerialNumber() + " contains "
+        return "Container " + GetSerialNumber() + " weighs " + ContainerWeight + " tonnes and is loaded with "+ CurrentCargoWeight + " tonnes, together:  "+(ContainerWeight + CurrentCargoWeight) +"\n";
     }
 
     public virtual void LoadCargo(double cargoWeight, string cargoType)
     {
-        if (cargoWeight  + CurrentWeight > MaxWeight)
+        if (cargoWeight  + CurrentCargoWeight > MaxCargoWeight)
         {
-            throw new OverfillException("cargo with weight of: " + cargoWeight + " is too heavy for this container, max weight is: " + MaxWeight);
+            throw new OverfillException("cargo with weight of: " + cargoWeight + " is too heavy for this container, max cargo weight is: " + MaxCargoWeight);
             
         }
-        else
         {
-            CargoType = cargoType;
-            CurrentWeight += cargoWeight;
+            CurrentCargoWeight += cargoWeight;
         }
     }
     
