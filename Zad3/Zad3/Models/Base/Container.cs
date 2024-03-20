@@ -5,43 +5,49 @@ namespace Zad3.Models.Base;
 
 public abstract class Container
 {
-    protected static int IdGenerator;
+    protected static int idGenerator;
+    public string CargoType { get; protected set; }
     public double CurrentWeight { get; set ; }
     public double ContainerWeight { get; }
     public double Depth { get; }
     protected int Id { get;  set; }
     public double MaxWeight { get; }
 
-    protected Container(double containerWeight, double depth, int id, double maxWeight)
+    protected Container(double containerWeight, double depth,  double maxWeight)
     {
         ContainerWeight = containerWeight;
         Depth = depth;
-        Id = IdGenerator++;
+        Id = ++idGenerator;
         MaxWeight = maxWeight;
     }
 
-    protected virtual void EmptyContainer()
+    public virtual void EmptyContainer()
     {
-        this.CurrentWeight = 0;
+        CurrentWeight = 0;
     }
 
-    protected virtual string GetSerialNumber(string containerType)
+    public virtual string GetSerialNumber()
     {
-        return "KON-" + containerType + "-" + this.Id;
+        return "KON-" + this.GetType().Name[0] + "-" + Id;
     }
 
-    protected virtual void LoadCargo(double cargoWeight)
+    public virtual string GetInfo()
     {
-        if (cargoWeight > MaxWeight)
+        return "Container " + GetSerialNumber() + " contains "
+    }
+
+    public virtual void LoadCargo(double cargoWeight, string cargoType)
+    {
+        if (cargoWeight  + CurrentWeight > MaxWeight)
         {
             throw new OverfillException("cargo with weight of: " + cargoWeight + " is too heavy for this container, max weight is: " + MaxWeight);
             
         }
         else
         {
-            this.CurrentWeight = cargoWeight;
+            CargoType = cargoType;
+            CurrentWeight += cargoWeight;
         }
     }
     
-    //metoda GetSerialNumber
 }
