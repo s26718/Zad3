@@ -13,3 +13,9 @@
 /Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.pdb
 /Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.genruntimeconfig.cache
 /Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/ref/Zad3.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/xunit.abstractions.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/xunit.assert.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/xunit.core.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/bin/Debug/net8.0/xunit.execution.dotnet.dll
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.csproj.AssemblyReference.cache
+/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/obj/Debug/net8.0/Zad3.csproj.Up2Date

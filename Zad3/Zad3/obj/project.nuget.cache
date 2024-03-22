@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "jpti712CaZDD0eBMpVum0O1yFAKNmShnaiFe1CShO8sEIDlaQrXGqWWhr2rOD/lE1Y4SH/jqJGOaRzHddPP8sw==",
+  "dgSpecHash": "IXaeCRTH5bGc7qQRALehTGQP06vgCd5LchoyvWBNy0MrrT6jt9VjbhWD+z47MulR6zQO1dHqR0VmLU5clDVPdw==",
   "success": true,
   "projectFilePath": "/Users/jasczajka/Documents/PJATK/SEM4/APBD/Zad3/Zad3/Zad3/Zad3.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/jasczajka/.nuget/packages/xunit/2.7.0/xunit.2.7.0.nupkg.sha512",
+    "/Users/jasczajka/.nuget/packages/xunit.abstractions/2.0.3/xunit.abstractions.2.0.3.nupkg.sha512",
+    "/Users/jasczajka/.nuget/packages/xunit.analyzers/1.11.0/xunit.analyzers.1.11.0.nupkg.sha512",
+    "/Users/jasczajka/.nuget/packages/xunit.assert/2.7.0/xunit.assert.2.7.0.nupkg.sha512",
+    "/Users/jasczajka/.nuget/packages/xunit.core/2.7.0/xunit.core.2.7.0.nupkg.sha512",
+    "/Users/jasczajka/.nuget/packages/xunit.extensibility.core/2.7.0/xunit.extensibility.core.2.7.0.nupkg.sha512",
+    "/Users/jasczajka/.nuget/packages/xunit.extensibility.execution/2.7.0/xunit.extensibility.execution.2.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
