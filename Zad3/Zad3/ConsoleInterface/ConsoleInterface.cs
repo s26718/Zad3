@@ -3,11 +3,11 @@ using Zad3.Models.ContainerTypes;
 
 namespace Zad3.Interface;
 
-public class Interface
+public class ConsoleInterface
 {
     private List<Container> Containers { get; set; }
     private List<ContainerShip> ContainerShips { get; set; }
-    public Interface()
+    public ConsoleInterface()
     {
         Containers = new List<Container>() { new GasContainer(13, 13, 13, 13) };
         //Containers = new List<Container>();

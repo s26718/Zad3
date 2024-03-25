@@ -91,8 +91,8 @@ class Program
 
     static void Main(string[] args)
     {
-        //TestRun();
-        Interface interf = new Interface();
+        TestRun();
+        ConsoleInterface interf = new ConsoleInterface();
         interf.Run();
 
     }
